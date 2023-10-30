@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<link rel="stylesheet" type="text/css" href="/css/showAllStudents.css">
+    
+</head>
+
+<body>
+    <div class="container">
+        <h2>Student List</h2>
+        <table class="student-table">
+            <thead>
+                <tr>
+                    <th>Student ID</th>
+                    <th>Student Name</th>
+                    <th>Student Batch</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="student : ${sList}" class="student-item">
+                    <td th:text="${student.kodId}"></td>
+                    <td th:text="${student.name}"></td>
+                    <td th:text="${student.batch}"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="button">
+        <a href="/mainMenu">Return to Main Menu</a>
+    </div>
+</body>
+
+</html>

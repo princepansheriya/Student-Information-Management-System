@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Student file</title>
+    <link rel="stylesheet" type="text/css" href="/css/showStudent.css">
+    
+</head>
+<body>
+    
+    <h1>Student Information</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Student ID</th>
+                <th>Name</th>
+                <th>Batch</th>
+            </tr>
+        </thead>
+       
+        <!-- Iterate over the 'students' list of Student objects -->
+        <tr>
+            <td th:text="${s.kodId}"></td>
+            <td th:text="${s.name}"></td>
+            <td th:text="${s.batch}"></td>
+        </tr>
+    </table>
+    
+    <!-- Add the "Go to Main Menu" button -->
+    <div class="button">
+        <a href="/mainMenu">Go to Main Menu</a>
+    </div>
+</body>
+</html>
